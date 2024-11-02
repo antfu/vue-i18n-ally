@@ -778,6 +778,11 @@
           "default": true,
           "description": "%config.annotation_in_place%"
         },
+        "i18n-ally.enableKeyPrefix": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable keyPrefix parsing for react-i18n-next"
+        },
         "i18n-ally.annotationMaxLength": {
           "type": "number",
           "default": 40,

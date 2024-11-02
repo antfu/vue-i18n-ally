@@ -21,8 +21,10 @@ export class KeyDetector {
 
     for (const reg of regs) {
       (text.match(reg) || [])
-        .forEach(key =>
-          keys.add(key.replace(reg, '$1')),
+        .forEach((rawKey) => {
+          const key = Config.enableKeyPrefix ? detectedKey(rawKey.replace(reg, '$1'), text) : rawKey
+          keys.add(key)
+        },
         )
     }
 
@@ -37,7 +39,8 @@ export class KeyDetector {
     for (const regex of regs) {
       const range = document.getWordRangeAtPosition(position, regex)
       if (range) {
-        const key = document.getText(range).replace(regex, '$1')
+        const rawKey = document.getText(range).replace(regex, '$1')
+        const key = Config.enableKeyPrefix ? detectedKey(rawKey, document.getText()) : rawKey
 
         if (dotEnding) {
           if (!key || key.endsWith('.'))
@@ -118,7 +121,8 @@ export class KeyDetector {
     const keys = regexFindKeys(text, regs, dotEnding, rewriteContext, scopes)
     if (filepath)
       this._get_keys_cache[filepath] = keys
-    return keys
+
+    return Config.enableKeyPrefix ? detectedKeys(keys, typeof document === 'string' ? document : document.getText()) : keys
   }
 
   static getUsages(document: TextDocument, loader?: Loader): KeyUsages | undefined {
@@ -156,9 +160,23 @@ export class KeyDetector {
 
     return {
       type,
-      keys,
+      keys: Config.enableKeyPrefix ? detectedKeys(keys, document.getText()) : keys,
       locale,
       namespace,
     }
   }
+}
+
+function detectedKey(key: string, documentText?: string): string {
+  if (!documentText) return key
+  const mathces = documentText.match(/useTranslation\(.+,\s*{\s*keyPrefix:\s*["'`](?<keyPath>.+)["'`]\s*}\s*\)/)
+
+  const keyPath = mathces?.groups?.keyPath
+  if (!keyPath) return key
+
+  return `${keyPath}.${key}`
+}
+
+export function detectedKeys<T extends {key: string}>(keys: T[], documentText?: string): T[] {
+  return keys.map(value => ({ ...value, key: detectedKey(value.key, documentText) }))
 }
