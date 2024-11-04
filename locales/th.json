@@ -111,7 +111,6 @@
   "errors.translating_unknown_error": "ข้อผิดพลาดที่ไม่รู้จักเกิดขึ้นในการแปล",
   "errors.unsupported_file_type": "ประเภทไฟล์ที่ไม่รองรับ: \"{0}\"",
   "errors.write_in_readonly_mode": "การเขียนในโหมดอ่านอย่างเดียวถูกปิดใช้งาน",
-  "นามสกุล": "i18n Ally",
   "feedback.document": "อ่านเอกสาร",
   "feedback.github": "ติดดาวบน GitHub",
   "feedback.report_issues": "รายงานปัญหา",
