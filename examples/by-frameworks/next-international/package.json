@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^13.4.0",
+    "next": "^13.5.0",
     "next-international": "^0.9.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
