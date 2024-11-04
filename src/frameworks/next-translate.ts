@@ -21,7 +21,7 @@ class NextTranslateFramework extends Framework {
 
   // for visualize the regex, you can use https://regexper.com/
   usageMatchRegex = [
-    '[^\\w\\d]t\\([\'"`]({key})[\'"`]',
+    '[^\\w\\d]t\\s*\\(\\s*[\'"`]({key})[\'"`]',
     '[^\\w\\d]t`({key})`',
     'Trans\\s+i18nKey=[\'"`]({key})[\'"`]',
   ]
