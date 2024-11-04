@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "Сопоставить путь для пользовательского перевода/пространства имен. Подробности смотрите в документации.",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Желаемый разделитель пути составного ключа, значение по умолчанию \"-\"(тире)",
   "config.prompt_translating_source": "Предлагать выбрать исходный перевод при переводе каждый раз. Если установлено false, будет использоваться исходный перевод из конфигурации.",
   "config.readonly": "Режим только для чтения",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "Удалять обработанные комментарии, а не помечать их как обработанные.",
   "config.review_username": "Имя пользователя для рецензирования",
   "config.show_flags": "Показывать флаги вместе с кодами переводов",
+  "config.sort_compare": "",
   "config.sort_keys": "Сортировка ключей при сохранении в JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "Исходный язык для машинного перевода",
   "config.tab_style": "Стиль вкладки для файлов переводов",
   "config.target_picking_strategy": "Стратегия выбора файла перевода при обнаружении нескольких файлов перевода",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} ключей используется",
   "view.usage_keys_missing": "{0} ключей отсутствует",
   "view.usage_keys_not_in_use": "{0} ключей НЕ используется",
-  "view.usage_report_none": "Обновите, чтобы начать анализ использования ключа"
+  "view.usage_report_none": "Обновите, чтобы начать анализ использования ключа",
+  "นามสกุล": ""
 }

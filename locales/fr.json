@@ -16,8 +16,8 @@
   "command.go_to_range": "Aller à la plage",
   "command.insert_key": "Insérer une clé",
   "command.locale_visibility_hide": "Cacher le dossier de la locale",
-  "command.mark_key_as_in_use": "Marquer cette clé comme « en utilisation »",
   "command.locale_visibility_show": "Afficher le dossier de la locale",
+  "command.mark_key_as_in_use": "Marquer cette clé comme « en utilisation »",
   "command.new_key": "Créer une clé",
   "command.open_editor": "Ouvrir l'éditeur",
   "command.open_in_editor": "Ouvrir dans l'éditeur",
@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "Faire correspondre le chemin pour les locales/namespaces personnalisés. Consultez la documentation pour plus de détails.",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Délimiteur recommandé pour les noms de chemins à trous, par défaut « - » (tiret)",
   "config.prompt_translating_source": "Invite à sélectionner la langue source à chaque fois. Si défini sur False, le langage du système sera automatiquement utilisé.",
   "config.readonly": "Mode « Lecture uniquement »",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "Supprimez le commentaire au lieu de le marquer comme résolu.",
   "config.review_username": "Nom d'utilisateur pour la revue",
   "config.show_flags": "Montrer les drapeaux avec les codes des locales",
+  "config.sort_compare": "",
   "config.sort_keys": "Sauvegarder et trier JSON/yaml",
+  "config.sort_locale": "",
   "config.source_language": "Langage source pour la traduction par machine",
   "config.tab_style": "Style de tabulation pour les fichiers de la locale",
   "config.target_picking_strategy": "Stratégie de gestion avec plusieurs fichiers de locale ont été trouvés.",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} clé(s) en utilisation.",
   "view.usage_keys_missing": "{0} clé(s) manquante(s)",
   "view.usage_keys_not_in_use": "{0} clé(s) non-utilisée(s).",
-  "view.usage_report_none": "Appuyez sur rafraîchir pour commencer l'analyse de l'utilisation des clés."
+  "view.usage_report_none": "Appuyez sur rafraîchir pour commencer l'analyse de l'utilisation des clés.",
+  "นามสกุล": ""
 }

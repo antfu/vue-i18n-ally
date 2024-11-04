@@ -722,6 +722,10 @@
           "default": true,
           "description": "%config.auto_detection%"
         },
+        "i18n-ally.pinnedWorkspaceFolder": {
+          "type": "string",
+          "description": "%config.pinned_workspace%"
+        },
         "i18n-ally.localesPaths": {
           "type": [
             "string",

@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Foretrukket skilletegn for komponert nøkkelbane, \"-\"(bindestrek) som standard",
   "config.prompt_translating_source": "",
   "config.readonly": "Skrivebeskyttet modus",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "",
   "config.review_username": "",
   "config.show_flags": "",
+  "config.sort_compare": "",
   "config.sort_keys": "Lagre med sortert json/yaml",
+  "config.sort_locale": "",
   "config.source_language": "Kildespråk for maskinoversettelse",
   "config.tab_style": "",
   "config.target_picking_strategy": "",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "",
   "view.usage_keys_missing": "",
   "view.usage_keys_not_in_use": "",
-  "view.usage_report_none": ""
+  "view.usage_report_none": "",
+  "นามสกุล": ""
 }

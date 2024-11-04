@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "Igual el path para configuraciones regionales/espacios de nombres personalizados. Comprueba la documentación para más detalles.",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Delimitador preferido para las rutas de acceso compuestas, por defecto \"-\"(guión)",
   "config.prompt_translating_source": "Solicitud para seleccionar la configuración regional de origen al traducir. Si se establece en false, se utilizará el idioma de origen en la configuración.",
   "config.readonly": "Modo solo lectura",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "Elimina el comentario en lugar de marcarlo como resuelto.",
   "config.review_username": "Nombre de usuario para la revisión",
   "config.show_flags": "Mostrar banderas junto a códigos regionales",
+  "config.sort_compare": "",
   "config.sort_keys": "Guardar con json/yaml ordenado",
+  "config.sort_locale": "",
   "config.source_language": "Código fuente para la traducción automática",
   "config.tab_style": "Estilo de pestañas para los archivos de localización",
   "config.target_picking_strategy": "Estrategias que tratan con más de un archivo de localización.",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} claves en uso",
   "view.usage_keys_missing": "Faltan las claves {0}",
   "view.usage_keys_not_in_use": "Las claves {0} NO están en uso",
-  "view.usage_report_none": "Presione actualizar para comenzar a analizar el uso de las teclas"
+  "view.usage_report_none": "Presione actualizar para comenzar a analizar el uso de las teclas",
+  "นามสกุล": ""
 }

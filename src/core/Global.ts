@@ -292,17 +292,26 @@ export class Global {
     if (!editor || !workspace.workspaceFolders || workspace.workspaceFolders.length === 0)
       return
 
-    const resource = editor.document.uri
-    if (resource.scheme === 'file') {
-      const folder = workspace.getWorkspaceFolder(resource)
+    if (Config._pinnedWorkspaceFolder) {
+      const folder = workspace.workspaceFolders?.find(i => i.name === Config._pinnedWorkspaceFolder)
       if (folder) {
         this._currentWorkspaceFolder = folder
         rootpath = folder.uri.fsPath
       }
     }
+    else {
+      const resource = editor.document.uri
+      if (resource.scheme === 'file') {
+        const folder = workspace.getWorkspaceFolder(resource)
+        if (folder) {
+          this._currentWorkspaceFolder = folder
+          rootpath = folder.uri.fsPath
+        }
+      }
 
-    if (!rootpath && workspace.rootPath)
-      rootpath = workspace.rootPath
+      if (!rootpath && workspace.rootPath)
+        rootpath = workspace.rootPath
+    }
 
     if (rootpath && rootpath !== this._rootpath) {
       this._rootpath = rootpath

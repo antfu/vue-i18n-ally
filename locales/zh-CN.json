@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "匹配自定义区域设置/命名空间的路径。查看文档了解更多详细信息。",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "组合键路径的默认分隔符，默认为 \"-\"（短划线）",
   "config.prompt_translating_source": "每次翻译时都会提示选择源语言环境。\n如果设置为false，将使用配置中的源语言。",
   "config.readonly": "只读模式",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "删除已处理的审批留言，而不是只将其标记为已处理。",
   "config.review_username": "使用者名称",
   "config.show_flags": "显示国旗图标",
+  "config.sort_compare": "",
   "config.sort_keys": "保存排序后的JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "翻译源语言",
   "config.tab_style": "文案文件的缩进样式",
   "config.target_picking_strategy": "如果找到多个语言文件时的语言文件选择策略",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} 条文案使用中",
   "view.usage_keys_missing": "{0} 条文案缺失",
   "view.usage_keys_not_in_use": "{0} 条文案未被使用",
-  "view.usage_report_none": "点击刷新开始使用分析"
+  "view.usage_report_none": "点击刷新开始使用分析",
+  "นามสกุล": ""
 }

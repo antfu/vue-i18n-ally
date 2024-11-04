@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "キーパスを構成するデリミタ。デフォルトは\"-\"(ダッシュ)",
   "config.prompt_translating_source": "",
   "config.readonly": "読取専用モード",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "",
   "config.review_username": "",
   "config.show_flags": "",
+  "config.sort_compare": "",
   "config.sort_keys": "ソート済みjson/yamlで保存する",
+  "config.sort_locale": "",
   "config.source_language": "機械翻訳のための元言語",
   "config.tab_style": "",
   "config.target_picking_strategy": "",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} キーを使用中",
   "view.usage_keys_missing": "",
   "view.usage_keys_not_in_use": "{0} キーは使用していません",
-  "view.usage_report_none": ""
+  "view.usage_report_none": "",
+  "นามสกุล": ""
 }

@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Delimitador para o caminho da chave, o padrão é \"-\"(hífen)",
   "config.prompt_translating_source": "Sempre perguntar idioma de origem durante tradução. Se o valor for \"false\", será usado o idioma de origem das configurações.",
   "config.readonly": "Modo apenas leitura",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "",
   "config.review_username": "",
   "config.show_flags": "",
+  "config.sort_compare": "",
   "config.sort_keys": "Salvar com json/yaml seperados",
+  "config.sort_locale": "",
   "config.source_language": "Idioma de origem para tradução de máquina",
   "config.tab_style": "Estilo da aba para arquivos de lozalização (locales)",
   "config.target_picking_strategy": "",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} chaves em uso",
   "view.usage_keys_missing": "{0} chaves faltantes",
   "view.usage_keys_not_in_use": "{0} chaves não estão em uso",
-  "view.usage_report_none": ""
+  "view.usage_report_none": "",
+  "นามสกุล": ""
 }

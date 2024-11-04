@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "Matcha sökväg för egna locale-filer/namespace. Se dokumentation för mer detaljer.",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Föredragen avskiljare av sammansatta nyckelsökvägar, som standard satt till \"-\" (bindestreck)",
   "config.prompt_translating_source": "Fråga om att välja locale-filskälla varje gång vid översättning. Om satt till `false` kommer locale-filskällan i konfigurationen användas.",
   "config.readonly": "Skrivskyddat läge",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "Ta bort kommentaren istället för att markera den som löst.",
   "config.review_username": "Användarnamn för granskning",
   "config.show_flags": "Visa flaggor med locale-koder",
+  "config.sort_compare": "",
   "config.sort_keys": "Sortera nycklar vid sparning till JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "Källspråk för maskinöversättning",
   "config.tab_style": "Tab-stil för locale-filer",
   "config.target_picking_strategy": "Strategi att använda när flera locale-filer hittats.",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} nycklar används",
   "view.usage_keys_missing": "{0} nycklar saknas",
   "view.usage_keys_not_in_use": "{0} nycklar används INTE",
-  "view.usage_report_none": "Tryck på uppdatera för att starta analysering av nyckelanvändning"
+  "view.usage_report_none": "Tryck på uppdatera för att starta analysering av nyckelanvändning",
+  "นามสกุล": ""
 }

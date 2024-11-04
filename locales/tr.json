@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "Dosya yolunu özelleştirilmiş bir dil/namespace'e göre eşleştirin. Daha fazla ayrıntı için dokümantasyona göz atın.",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Bileşik anahtar yolları için ayıran karakter, varsayılan \"-\" (tire)",
   "config.prompt_translating_source": "Her seferinde çeviride kaynak dili seçmesini isteyin. Eğer false olarak ayarlıysa, yapılandırmadaki kaynak dil kullanılacaktır.",
   "config.readonly": "Sade okuma modu",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "İncelendi olarak işaretlemek yerine yorumu sil.",
   "config.review_username": "İncelemeler için kullanıcı adınız",
   "config.show_flags": "Çeviri kodlarıyla beraber eşleşen bayrağı göster",
+  "config.sort_compare": "",
   "config.sort_keys": "JSON/YAML dosyasına kaydederken çeviri anahtarlarını diz",
+  "config.sort_locale": "",
   "config.source_language": "Makine çevirisi için kaynak dil",
   "config.tab_style": "Dil dosyaları için Tab stili",
   "config.target_picking_strategy": "Birden fazla dil dosyası bulunduğunda uygulanacak strateji",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} çeviri kullanımda",
   "view.usage_keys_missing": "{0} çeviri eksik",
   "view.usage_keys_not_in_use": "{0} çeviri kullanımda DEĞİL",
-  "view.usage_report_none": "Çeviri kullanımını incelemek için yenileye basın"
+  "view.usage_report_none": "Çeviri kullanımını incelemek için yenileye basın",
+  "นามสกุล": ""
 }

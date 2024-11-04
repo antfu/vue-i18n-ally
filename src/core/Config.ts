@@ -28,6 +28,7 @@ export class Config {
     'ignoreFiles',
     'parserOptions',
     'parsers.extendFileExtensions',
+    'pinnedWorkspaceFolder',
   ]
 
   static readonly refreshConfigs = [
@@ -263,6 +264,14 @@ export class Config {
     else {
       this.ignoredLocales = ignored.filter(i => i !== locale)
     }
+  }
+
+  static get _pinnedWorkspaceFolder(): string | undefined {
+    return this.getConfig('pinnedWorkspaceFolder') || undefined
+  }
+
+  static set _pinnedWorkspaceFolder(value: string | undefined) {
+    this.setConfig('pinnedWorkspaceFolder', value, true)
   }
 
   // locales

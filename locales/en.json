@@ -75,6 +75,7 @@
   "config.openai_api_model": "OpenAI chatgpt model",
   "config.openai_api_root": "OpenAI API root URL",
   "config.path_matcher": "Match path for custom locale/namespace. Check out the docs for more details.",
+  "config.pinned_workspace": "Select a specific folder in your Workspace by name to be always by the extension in a Multi-Folder workspace.",
   "config.preferred_delimiter": "Preferred delimiter of composed keypath, default to \"-\"(dash)",
   "config.prompt_translating_source": "Prompt to select source locale on translating every time. If set false, the source language in the config will be used.",
   "config.readonly": "Read-only mode",
@@ -88,8 +89,8 @@
   "config.review_remove_on_resolved": "Remove the comment instead of marking it as resolved.",
   "config.review_username": "Username for reviewing",
   "config.show_flags": "Show flags along with locale codes",
-  "config.sort_keys": "Sort keys when saving to JSON/YAML",
   "config.sort_compare": "Strategy for sorting keys.",
+  "config.sort_keys": "Sort keys when saving to JSON/YAML",
   "config.sort_locale": "Locale to with if locale sort is used (will use the file's own locale if not specified)",
   "config.source_language": "Source language for machine translation",
   "config.tab_style": "Tab style for locale files",
@@ -236,5 +237,6 @@
   "view.usage_keys_in_use": "{0} keys are in use",
   "view.usage_keys_missing": "{0} keys are missing",
   "view.usage_keys_not_in_use": "{0} keys are NOT in use",
-  "view.usage_report_none": "Press refresh to start analysing key usage"
+  "view.usage_report_none": "Press refresh to start analysing key usage",
+  "นามสกุล": ""
 }

@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "Pfad für benutzerdefinierten Namespace. Dokumentation für weitere details prüfen.",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Bevorzugtes Trennzeichen für zusammengesetzte Schlüsse. Standardwert ist \"-\"",
   "config.prompt_translating_source": "Aufforderung zur Auswahl der Quellsprache bei jeder Verwendung. Wenn false, die Quellsprache wird aus der Konfiguration gelesen.",
   "config.readonly": "Lesemodus",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "Kommentar löschen, anstatt ihn als behoben zu markieren. ",
   "config.review_username": "Nutzername zum Überprüfen",
   "config.show_flags": "Flaggen zusammen mit Lokalisierungscodes anzeigen",
+  "config.sort_compare": "",
   "config.sort_keys": "Schlüssel beim speichern von JSON/YAML sortierne",
+  "config.sort_locale": "",
   "config.source_language": "Quellsprache für machinelle Übersetzung",
   "config.tab_style": "Tabulatorstil",
   "config.target_picking_strategy": "Es wurde eine Strategie gefunden, die mit mehr als einer Lokalisierungsdatei arbeitet.",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} Schlüssel sind in Verwendung",
   "view.usage_keys_missing": "{0} Schlüssel fehlen",
   "view.usage_keys_not_in_use": "{0} Schlüssel nicht in Verwendung",
-  "view.usage_report_none": "Neulanden um Schlüssel Benutzng zu analysieren"
+  "view.usage_report_none": "Neulanden um Schlüssel Benutzng zu analysieren",
+  "นามสกุล": ""
 }

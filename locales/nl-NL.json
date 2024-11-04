@@ -75,6 +75,7 @@
   "config.openai_api_model": "",
   "config.openai_api_root": "",
   "config.path_matcher": "Pad voor onderscheiding van sleutels op basis van folderstructuur/bestandsnaam. Zie documentatie voor meer uitleg.",
+  "config.pinned_workspace": "",
   "config.preferred_delimiter": "Gewenst scheidingsteken voor sleutel pad, standaard waarde \"-\"(dash)",
   "config.prompt_translating_source": "Altijd vragen om de bron locale te selectering bij vertalingen. Indien false, dan zal de bron taal in de configuratie gebruikt worden.",
   "config.readonly": "Readonly modus",
@@ -88,7 +89,9 @@
   "config.review_remove_on_resolved": "",
   "config.review_username": "",
   "config.show_flags": "",
+  "config.sort_compare": "",
   "config.sort_keys": "Sleutels sorteren bij opslaan van JSON/YAML bestanden",
+  "config.sort_locale": "",
   "config.source_language": "Brontaal voor automatisch vertalen",
   "config.tab_style": "Tab stijl voor locale bestanden",
   "config.target_picking_strategy": "",
@@ -234,5 +237,6 @@
   "view.usage_keys_in_use": "{0} sleutels zijn in gebruik",
   "view.usage_keys_missing": "{0} ontbrekende sleutels",
   "view.usage_keys_not_in_use": "{0} sleutels zijn NIET in gebruik",
-  "view.usage_report_none": "Klik op verversen om sleutelgebruik te analyseren"
+  "view.usage_report_none": "Klik op verversen om sleutelgebruik te analyseren",
+  "นามสกุล": ""
 }
