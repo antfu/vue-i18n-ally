@@ -36,6 +36,7 @@
   "i18n-ally.translate.promptSource": true,
   "i18n-ally.pathMatcher": "{locale}.json",
   "i18n-ally.translate.saveAsCandidates": true,
+  //
   "i18n-ally.keysInUse": [
     "view.progress_submenu.translated_keys",
     "view.progress_submenu.missing_keys",
@@ -63,4 +64,8 @@
     "html"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.extract.ignored": [
+    "^[A-Z][a-zA-Z0-9\\s]*$"
+  ],
+
 }
