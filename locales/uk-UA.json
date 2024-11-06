@@ -88,7 +88,9 @@
   "config.review_remove_on_resolved": "Видаляти оброблені коментарі, а не позначати їх як оброблені",
   "config.review_username": "Ім'я користувача для аудиту",
   "config.show_flags": "Показувати прапори разом з кодами мов",
+  "config.sort_compare": "",
   "config.sort_keys": "Сортування ключів при збереженні в  JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "Мова оригіналу для машинного перекладу",
   "config.tab_style": "Стиль вкладки для файлів перекладів",
   "config.target_picking_strategy": "Стратегія вибору файлу перекладу при виявленні декількох файлів",
@@ -234,5 +236,6 @@
   "view.usage_keys_in_use": "{0} ключі використовуються",
   "view.usage_keys_missing": "{0} ключі відсутні",
   "view.usage_keys_not_in_use": "{0} ключі НЕ використовуються",
-  "view.usage_report_none": "Оновіть, щоб почати аналіз використання ключа"
+  "view.usage_report_none": "Оновіть, щоб почати аналіз використання ключа",
+  "นามสกุล": ""
 }

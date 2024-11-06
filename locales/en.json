@@ -88,8 +88,8 @@
   "config.review_remove_on_resolved": "Remove the comment instead of marking it as resolved.",
   "config.review_username": "Username for reviewing",
   "config.show_flags": "Show flags along with locale codes",
-  "config.sort_keys": "Sort keys when saving to JSON/YAML",
   "config.sort_compare": "Strategy for sorting keys.",
+  "config.sort_keys": "Sort keys when saving to JSON/YAML",
   "config.sort_locale": "Locale to with if locale sort is used (will use the file's own locale if not specified)",
   "config.source_language": "Source language for machine translation",
   "config.tab_style": "Tab style for locale files",
@@ -236,5 +236,6 @@
   "view.usage_keys_in_use": "{0} keys are in use",
   "view.usage_keys_missing": "{0} keys are missing",
   "view.usage_keys_not_in_use": "{0} keys are NOT in use",
-  "view.usage_report_none": "Press refresh to start analysing key usage"
+  "view.usage_report_none": "Press refresh to start analysing key usage",
+  "นามสกุล": ""
 }

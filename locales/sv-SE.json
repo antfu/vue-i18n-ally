@@ -88,7 +88,9 @@
   "config.review_remove_on_resolved": "Ta bort kommentaren istället för att markera den som löst.",
   "config.review_username": "Användarnamn för granskning",
   "config.show_flags": "Visa flaggor med locale-koder",
+  "config.sort_compare": "",
   "config.sort_keys": "Sortera nycklar vid sparning till JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "Källspråk för maskinöversättning",
   "config.tab_style": "Tab-stil för locale-filer",
   "config.target_picking_strategy": "Strategi att använda när flera locale-filer hittats.",
@@ -234,5 +236,6 @@
   "view.usage_keys_in_use": "{0} nycklar används",
   "view.usage_keys_missing": "{0} nycklar saknas",
   "view.usage_keys_not_in_use": "{0} nycklar används INTE",
-  "view.usage_report_none": "Tryck på uppdatera för att starta analysering av nyckelanvändning"
+  "view.usage_report_none": "Tryck på uppdatera för att starta analysering av nyckelanvändning",
+  "นามสกุล": ""
 }

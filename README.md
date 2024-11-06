@@ -117,6 +117,7 @@ This extension itself supports i18n as well. It will be auto-matched to the disp
 
 | Language | Maintainer | Contributors |
 | --- | --- | --- |
+| Arabic    | [@issam-seghir](https://github.com/issam-seghir)          | [@issam-seghir](https://github.com/issam-seghir)      |
 | English    | [@antfu](https://github.com/antfu)          | [@rubjo](https://github.com/rubjo), [@EdRands](https://github.com/EdRands) |
 | Simplified Chinese (简体中文)  | [@antfu](https://github.com/antfu)           |       |
 | Traditional Chinese (繁體中文)  | [@antfu](https://github.com/antfu)           |       |
