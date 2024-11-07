@@ -1273,6 +1273,11 @@
           "type": "string",
           "description": "%config.default_namespace%"
         },
+        "i18n-ally.keyPrefix": {
+          "type": "boolean",
+          "description": "Enable keyPrefix parsing",
+          "default": false
+        },
         "i18n-ally.derivedKeyRules": {
           "deprecationMessage": "Deprecated. Use \"i18n-ally.usage.derivedKeyRules\" instead."
         },

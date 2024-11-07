@@ -162,7 +162,7 @@ class ReactI18nextFramework extends Framework {
 
     // Add first namespace as a global scope resetting on each occurrence
     // useTranslation(ns1) and useTranslation(['ns1', ...])
-    const regUse = /useTranslation\(\s*\[?\s*['"`](.*?)['"`]/g
+    const regUse = /useTranslation\(\s*\[?\s*['"`](?<translationKey>.*?)['"`](,\s*['"`][^"'`]*['"`])*\s*\]?\s*(?:,\s*\{[^}]*keyPrefix\s*:\s*['"`](?<keyPrefix>.*?)['"`][^}]*\})?\s*\)/g
     let prevGlobalScope = false
     for (const match of text.matchAll(regUse)) {
       if (typeof match.index !== 'number')
@@ -173,12 +173,13 @@ class ReactI18nextFramework extends Framework {
         ranges[ranges.length - 1].end = match.index
 
       // start a new scope if namespace is provided
-      if (match[1]) {
+      if (match.groups?.translationKey) {
         prevGlobalScope = true
         ranges.push({
           start: match.index,
           end: text.length,
-          namespace: match[1],
+          namespace: match.groups.translationKey,
+          keyPrefix: match.groups.keyPrefix,
         })
       }
     }

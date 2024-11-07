@@ -22,6 +22,7 @@ export class Config {
     'encoding',
     'namespace',
     'defaultNamespace',
+    'keyPrefix',
     'disablePathParsing',
     'readonly',
     'languageTagSystem',
@@ -146,6 +147,10 @@ export class Config {
     return this.getConfig<string>('defaultNamespace')
   }
 
+  static get enableKeyPrefix(): boolean | undefined {
+    return this.getConfig<boolean>('keyPrefix')
+  }
+
   static get enabledFrameworks(): string[] | undefined {
     let ids = this.getConfig<string | string[]>('enabledFrameworks')
     if (!ids || !ids.length)
@@ -180,7 +185,7 @@ export class Config {
     return this.getConfig<SortCompare>('sortCompare') || 'binary'
   }
 
-  static get sortLocale(): string | undefined{
+  static get sortLocale(): string | undefined {
     return this.getConfig<string>('sortLocale')
   }
 

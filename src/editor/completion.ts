@@ -1,6 +1,6 @@
 import { CompletionItemProvider, TextDocument, Position, CompletionItem, CompletionItemKind, languages } from 'vscode'
 import { ExtensionModule } from '~/modules'
-import { Global, KeyDetector, Loader, CurrentFile, LocaleTree, LocaleNode } from '~/core'
+import { Global, KeyDetector, Loader, CurrentFile, LocaleTree, LocaleNode, Config } from '~/core'
 
 class CompletionProvider implements CompletionItemProvider {
   public provideCompletionItems(
@@ -16,17 +16,19 @@ class CompletionProvider implements CompletionItemProvider {
     if (key === undefined)
       return
 
-    const scopedKey = KeyDetector.getScopedKey(document, position)
+    let scopedKey = KeyDetector.getScopedKey(document, position)
 
     if (!key) {
+      scopedKey = scopedKey || Config.defaultNamespace
+
       return Object
         .values(CurrentFile.loader.keys)
+        .filter(key => key.startsWith(scopedKey || ''))
         .map((key) => {
           let resolvedKey = key
           if (scopedKey)
-          {
-            resolvedKey = key.replace(`${scopedKey}.`, "")
-          }
+            resolvedKey = key.replace(`${scopedKey}.`, '')
+
           const item = new CompletionItem(resolvedKey, CompletionItemKind.Text)
           item.detail = loader.getValueByKey(key)
           return item

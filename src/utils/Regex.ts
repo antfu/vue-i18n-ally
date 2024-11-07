@@ -27,6 +27,7 @@ export function handleRegexMatch(
   const quoted = QUOTE_SYMBOLS.includes(text[start - 1])
 
   const namespace = scope?.namespace || defaultNamespace
+  const keyPrefix = Config.enableKeyPrefix ? scope?.keyPrefix : undefined
 
   // prevent duplicated detection when multiple frameworks enables at the same time.
   if (starts.includes(start))
@@ -38,7 +39,7 @@ export function handleRegexMatch(
   const hasExplicitNamespace = namespaceDelimiters.some(delimiter => key.includes(delimiter))
 
   if (!hasExplicitNamespace && namespace)
-    key = `${namespace}.${key}`
+    key = `${namespace}.${keyPrefix ? `${keyPrefix}.` : ''}${key}`
 
   if (dotEnding || !key.endsWith('.')) {
     key = CurrentFile.loader.rewriteKeys(key, 'reference', {

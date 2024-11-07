@@ -17,6 +17,7 @@ export interface ScopeRange {
   start: number
   end: number
   namespace: string
+  keyPrefix?: string
 }
 
 export abstract class Framework {

@@ -100,3 +100,8 @@ function Page5() {
   )
 }
 
+function KeyPrefix() {
+  const { t } = useTranslation('pages/home', { keyPrefix: 'description' });
+
+  t('part1')
+}
