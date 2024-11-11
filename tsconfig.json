@@ -9,6 +9,7 @@
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "allowJs": true,
     "declaration": true,
     "moduleResolution": "node",
     "skipLibCheck": true,

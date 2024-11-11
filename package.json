@@ -65,6 +65,7 @@
     "parse-gitignore": "^1.0.1",
     "pofile": "^1.1.1",
     "properties": "^1.2.1",
+    "proxy-agent": "^6.3.1",
     "qs": "^6.10.3",
     "semver": "^7.5.2",
     "string-similarity": "^4.0.4",

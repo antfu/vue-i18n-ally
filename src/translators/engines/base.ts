@@ -1,3 +1,9 @@
+import axios from 'axios'
+import { ProxyAgent } from 'proxy-agent'
+
+axios.defaults.httpAgent = axios.defaults.httpsAgent = new ProxyAgent()
+axios.defaults.proxy = false
+
 export interface TranslateEngineConfig {
   timeout?: number
   apiKey?: string

@@ -43,8 +43,16 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        exclude: /node_modules/,
+        test: /\.(ts|js)$/,
+        exclude: {
+          include: /node_modules/,
+          not: [
+            // The "proxy-agent" related library uses optional chaining feature and requires conversion using "ts-loader."
+            /node_modules[\\\/](\w+-)?proxy-agent/,
+            /node_modules[\\\/](get-uri|agent-base|degenerator)/,
+            /node_modules[\\\/]@tootallnate[\\\/]quickjs-emscripten/,
+          ],
+        },
         use: [
           {
             loader: 'ts-loader',
