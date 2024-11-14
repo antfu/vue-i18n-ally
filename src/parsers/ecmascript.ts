@@ -1,9 +1,10 @@
 import child_process from 'child_process'
 import path from 'path'
+import ts from 'typescript'
 import { Parser } from './base'
 import i18n from '~/i18n'
 import { Log } from '~/utils'
-import { Config, Global } from '~/core'
+import { Config, Global, KeyInDocument } from '~/core'
 
 const LanguageIds = {
   js: 'javascript',
@@ -18,7 +19,7 @@ const LanguageExts = {
 export class EcmascriptParser extends Parser {
   readonly readonly = true
 
-  constructor(public readonly id: 'js'|'ts' = 'js') {
+  constructor(public readonly id: 'js' | 'ts' = 'js') {
     super([LanguageIds[id]], LanguageExts[id])
   }
 
@@ -47,8 +48,7 @@ export class EcmascriptParser extends Parser {
       // eslint-disable-next-line no-console
       console.log(`[i18n-ally] spawn: ${cmd}`)
       child_process.exec(cmd, (err, stdout) => {
-        if (err)
-          return reject(err)
+        if (err) return reject(err)
         try {
           resolve(JSON.parse(stdout.trim()))
         }
@@ -61,5 +61,44 @@ export class EcmascriptParser extends Parser {
 
   async save() {
     Log.error(i18n.t('prompt.writing_js'))
+  }
+
+  parseAST(text: string): KeyInDocument[] {
+    const sourceFile = ts.createSourceFile(
+      'ts-source',
+      text,
+      ts.ScriptTarget.Latest,
+    )
+
+    const traverseNode = (node: ts.Node, path: string[] = []) => {
+      let res: KeyInDocument[] = []
+      if (!node)
+        return []
+
+      if (
+        ts.isPropertyAssignment(node)
+        && (ts.isIdentifier(node.name) || ts.isStringLiteral(node.name))
+      ) {
+        const start = node.getStart(sourceFile)
+        const end = node.name.getEnd()
+
+        path = [...path, node.name.text]
+        res.push({
+          key: path.join('.'),
+          start,
+          end,
+          quoted: ts.isStringLiteral(node.name),
+        })
+      }
+
+      ts.forEachChild(node, (node) => {
+        const r = traverseNode(node, path)
+        res = res.concat(r)
+      })
+
+      return res
+    }
+
+    return traverseNode(sourceFile)
   }
 }
