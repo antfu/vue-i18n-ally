@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> This is a fork of the [i18n-ally](https://github.com/lokalise/i18n-ally) extension, but with vue-sfc framework `namespaceAsPrefix` support and improved custom intellisense.
+> All credits go to the creators of the official extension.
+> Thanks!
+
 <p align="center">
 <img src="https://github.com/lokalise/i18n-ally/blob/main/screenshots/full-logo-new.png?raw=true" alt="logo" width="450"/>
 </p>

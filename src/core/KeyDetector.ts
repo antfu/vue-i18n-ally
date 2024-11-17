@@ -55,14 +55,20 @@ export class KeyDetector {
     return keyRange?.key
   }
 
-  static getScopedKey(document: TextDocument, position: Position)
-  {
+  static getScopedKey(document: TextDocument, position: Position) {
     const scopes = Global.enabledFrameworks.flatMap(f => f.getScopeRange(document) || [])
-    if (scopes.length > 0)
-    {
+
+    if (scopes.length > 0) {
       const offset = document.offsetAt(position)
-      return scopes.filter(s => s.start < offset && offset < s.end).map(s => s.namespace).join('.')
+      // 找到當前位置最近的一個 scope
+      const currentScope = scopes
+        .filter(s => s.start < offset && offset < s.end)
+        .pop() // 取最後一個匹配的 scope，因為它應該是最近的
+
+      return currentScope?.namespace || Config.defaultNamespace
     }
+
+    return Config.defaultNamespace
   }
 
   static getKeyAndRange(document: TextDocument, position: Position, dotEnding?: boolean) {
@@ -103,12 +109,18 @@ export class KeyDetector {
       if (this._get_keys_cache[filepath])
         return this._get_keys_cache[filepath]
 
-      regs = regs ?? Global.getUsageMatchRegex(document.languageId, filepath)
+      // regs = regs ?? Global.getUsageMatchRegex(document.languageId, filepath)
+      regs = regs ?? [
+        // eslint-disable-next-line prefer-regex-literals
+        new RegExp('\\Wtr\\(\'([\\w.-]+)\'(?:\\s*,\\s*{\\s*nsIndex:\\s*(\\d+)\\s*})?\\)', 'g'),
+      ]
       text = document.getText()
+      scopes = scopes || Global.enabledFrameworks.flatMap(f => f.getScopeRange(document) || [])
+
       rewriteContext = {
         targetFile: filepath,
+        namespace: scopes?.[0]?.namespace,
       }
-      scopes = scopes || Global.enabledFrameworks.flatMap(f => f.getScopeRange(document) || [])
     }
     else {
       regs = Global.getUsageMatchRegex()

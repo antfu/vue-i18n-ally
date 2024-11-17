@@ -16,7 +16,8 @@ export type PackageFileType
 export interface ScopeRange {
   start: number
   end: number
-  namespace: string
+  namespace?: string | undefined
+  namespaces?: Array<string | undefined>
 }
 
 export abstract class Framework {

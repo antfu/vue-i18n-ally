@@ -1,5 +1,5 @@
 {
-  "publisher": "lokalise",
+  "publisher": "nadihsu",
   "name": "i18n-ally",
   "version": "2.13.1",
   "displayName": "i18n Ally",
@@ -18,8 +18,8 @@
   "main": "./dist/extension",
   "scripts": {
     "release": "nr release:patch",
-    "release:minor": "standard-version --release-as minor && git push --follow-tags",
-    "release:patch": "standard-version --release-as patch && git push --follow-tags",
+    "release:minor": "standard-version --release-as minor && git push fork --follow-tags",
+    "release:patch": "standard-version --release-as patch && git push fork --follow-tags",
     "gh:release": "conventional-github-releaser -p angular",
     "build": "rimraf dist && nr i18n:build && nr main:build && nr editor:build && esno scripts/post-build.ts",
     "dev": "run-p *:dev",
@@ -1273,6 +1273,11 @@
           "type": "string",
           "description": "%config.default_namespace%"
         },
+        "i18n-ally.namespaceAsPrefix": {
+          "type": "boolean",
+          "description": "Enable namespace as keyPrefix parsing",
+          "default": false
+        },
         "i18n-ally.derivedKeyRules": {
           "deprecationMessage": "Deprecated. Use \"i18n-ally.usage.derivedKeyRules\" instead."
         },
@@ -1368,5 +1373,8 @@
       }
     ]
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "volta": {
+    "node": "18.19.0"
+  }
 }

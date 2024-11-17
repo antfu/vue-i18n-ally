@@ -149,4 +149,10 @@ export class ComposedLoader extends Loader {
   }
 
   // TODO: sfc merge tree nodes
+  exists(key: string): boolean {
+    return this.loaders.some((loader) => {
+      const node = loader.getTreeNodeByKey(key)
+      return node?.type === 'node' || node?.type === 'tree'
+    })
+  }
 }
