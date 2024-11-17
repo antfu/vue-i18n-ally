@@ -1,8 +1,8 @@
 {
   "publisher": "nadihsu",
-  "name": "i18n-ally",
-  "version": "2.13.1",
-  "displayName": "i18n Ally",
+  "name": "i18n-ally-vue-ns",
+  "version": "2.13.2",
+  "displayName": "i18n-ally-vue-ns",
   "description": "🌍 All in one i18n extension for VS Code",
   "keywords": [
     "vue",
