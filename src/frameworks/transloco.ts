@@ -63,15 +63,16 @@ export default class TranslocoFramework extends Framework {
     return actualKey && scope ? `${scope}.${actualKey}` : key
   }
 
-  // support for `read` syntax
-  // https://ngneat.github.io/transloco/docs/translation-in-the-template#utilizing-the-read-input
+  // support for `read` (old, deprecated) AND `prefix` (new) syntax
+  // `read` is deprecated in favor of `prefix` and will be removed in the next major version.
+  // https://jsverse.github.io/transloco/docs/translation-in-the-template#utilizing-the-prefix-input
   getScopeRange(document: TextDocument): ScopeRange[] | undefined {
     if (document.languageId !== 'html')
       return
 
     const ranges: ScopeRange[] = []
 
-    const regex = /^.*read:\s*['"](.+?)['"].*$/
+    const regex = /^.*(?:read|prefix):\s*['"](.+?)['"].*$/
     const tagStack: string[] = []
     let stackDepth = -1
     let namespace = ''
