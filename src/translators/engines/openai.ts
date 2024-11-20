@@ -4,7 +4,7 @@ import { Config } from "~/core";
 
 export default class OpenAITranslate extends TranslateEngine {
   apiRoot = "https://api.openai.com";
-  systemPrompt = "You are a professional translation engine. Please translate text without explanation.";
+  systemPrompt = 'You are a professional translation engine. Please translate text.'
 
   async translate(options: TranslateOptions) {
     let apiKey = Config.openaiApiKey;
@@ -24,7 +24,7 @@ export default class OpenAITranslate extends TranslateEngine {
         messages: [
           {
             role: "system",
-            content: this.systemPrompt,
+            content: this.generateSystemPrompt(),
           },
           {
             role: "user",
@@ -61,12 +61,37 @@ export default class OpenAITranslate extends TranslateEngine {
     return r;
   }
 
+  generateSystemPrompt(): string {
+    const frameworks = Config.enabledFrameworks
+    if (frameworks === undefined)
+      return this.systemPrompt
+
+    let systemPrompt = this.systemPrompt
+
+    if (frameworks.includes('i18next') || frameworks.includes('react-i18next')) {
+      systemPrompt += ' Text inside "{{}}" or "{}" are variable substitutions and should be kept intact but they can be moved around if necessary and the variable name can be used for additional context.'
+      systemPrompt += ' Text inside "$t()" are translation substitutions and must be kept as is but they can be moved around if necessary.'
+      systemPrompt += ' Use i18next plural rules for pluralization based on the translation key and the target locale.'
+    }
+
+    return systemPrompt
+  }
+
   generateUserPrompts(options: TranslateOptions): string {
-    const sourceLang = options.from;
-    const targetLang = options.to;
+    const sourceLang = options.from
+    const targetLang = options.to
+    const description = options.description
+    const key = options.key
 
-    let generatedUserPrompt = `translate from ${sourceLang} to ${targetLang}:\n\n${options.text}`;
+    let generatedUserPrompt = `Translate from ${sourceLang} to ${targetLang}.`
 
-    return generatedUserPrompt;
+    if (description)
+      generatedUserPrompt += `Description of the text is "${description}", use it to provide better translation but do not use it in the output directly.`
+
+    generatedUserPrompt += `The key for this translation is "${key}".`
+
+    generatedUserPrompt += `:\n\n${options.text}`
+
+    return generatedUserPrompt
   }
 }

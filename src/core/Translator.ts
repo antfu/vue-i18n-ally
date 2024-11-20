@@ -75,6 +75,10 @@ export class Translator {
 
     return sourceRecord.value
   }
+
+  private static getDescriptionOfKey(keypath: string) {
+    return Global.reviews.getDescription(keypath)
+  }
   // #endregion
 
   static async translateNodes(
@@ -252,11 +256,12 @@ export class Translator {
       throw new AllyError(ErrorType.translating_same_locale)
 
     const value = this.getValueOfKey(loader, keypath, source)
+    const description = this.getDescriptionOfKey(keypath)
 
     try {
       Log.info(`🌍 Translating "${keypath}" (${source}->${locale})`)
       this.start(keypath, locale)
-      const result = await this.translateText(value, source, locale)
+      const result = await this.translateText(keypath, value, source, locale, description)
       this.end(keypath, locale)
 
       if (token?.isCancellationRequested)
@@ -300,7 +305,7 @@ export class Translator {
     }
   }
 
-  private static async translateText(text: string, from: string, to: string) {
+  private static async translateText(key: string, text: string, from: string, to: string, description?: string) {
     const engines = Config.translateEngines
     let trans_result: TranslateResult | undefined
 
@@ -311,7 +316,14 @@ export class Translator {
 
     for (const engine of engines) {
       try {
-        trans_result = await this._translator.translate({ engine, text, from, to })
+        trans_result = await this._translator.translate({
+          engine,
+          key,
+          text,
+          from,
+          to,
+          description,
+        })
         if (trans_result.error)
           throw trans_result.error
 

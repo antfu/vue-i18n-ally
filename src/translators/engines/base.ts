@@ -5,8 +5,10 @@ export interface TranslateEngineConfig {
 
 export interface TranslateOptions {
   text: string
+  key: string
   from?: string
   to?: string
+  description?: string
 }
 
 export interface TranslateResult {
