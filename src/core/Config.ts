@@ -244,6 +244,11 @@ export class Config {
     return `node "${path.resolve(this.extensionPath!, config)}"`
   }
 
+  static get tsConfigPathsRegisterPath(): string {
+    const register = 'node_modules/tsconfig-paths/register'
+    return path.resolve(this.extensionPath!, register)
+  }
+
   static get parsersTypescriptCompilerOption(): any {
     return this.getConfig<any>('parsers.typescript.compilerOptions') || {}
   }
