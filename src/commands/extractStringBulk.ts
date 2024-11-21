@@ -8,7 +8,7 @@ import { extractHardStrings, generateKeyFromText } from '~/core/Extract'
 import { Config, Global } from '~/core'
 import { parseHardString } from '~/extraction/parseHardString'
 import { DetectionResultToExtraction } from '~/editor/extract'
-import { Log } from '~/utils'
+import { Log, preSufArgString } from '~/utils'
 import { gitignoredGlob } from '~/utils/glob'
 import { ActionSource, Telemetry, TelemetryKey } from '~/core/Telemetry'
 
@@ -72,7 +72,7 @@ export async function BatchHardStringExtraction(...args: any[]) {
           const options = DetectionResultToExtraction(i, document)
 
           if (options.rawText && !options.text) {
-            const result = parseHardString(options.rawText, options.document.languageId, options.isDynamic)
+            const result = parseHardString(options.rawText, options.document.languageId, options.isDynamic, preSufArgString)
             options.text = result?.text || ''
             options.args = result?.args
           }

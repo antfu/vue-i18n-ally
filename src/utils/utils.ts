@@ -107,3 +107,7 @@ export function getLocaleCompare(
   const sortLocale = sortLocaleSetting ? sortLocaleSetting : fileLocale;
   return new Intl.Collator(sortLocale).compare;
 }
+
+export function preSufArgString(args: string[]){
+  return `${Config.argsPrefix}${args.length - 1}${Config.argsSuffix}`
+}

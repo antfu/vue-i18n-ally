@@ -587,4 +587,12 @@ export class Config {
   static get telemetry(): boolean {
     return workspace.getConfiguration().get('telemetry.enableTelemetry') as boolean
   }
+
+  static get argsSuffix() {
+    return this.getConfig<string>('argsSuffix')
+  }
+
+  static get argsPrefix() {
+    return this.getConfig<string>('argsPrefix')
+  }
 }

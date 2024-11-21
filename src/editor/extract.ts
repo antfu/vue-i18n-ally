@@ -7,6 +7,7 @@ import i18n from '~/i18n'
 import { parseHardString } from '~/extraction/parseHardString'
 import { ExtractTextOptions } from '~/commands/extractString'
 import { DetectionResult } from '~/core/types'
+import { preSufArgString } from '~/utils'
 
 export function DetectionResultToExtraction(detection: DetectionResult, document: TextDocument): ExtractTextOptions {
   return {
@@ -80,7 +81,7 @@ class ExtractProvider implements CodeActionProvider {
     if (!(selection instanceof Selection))
       return []
 
-    const result = parseHardString(document.getText(selection), document.languageId)
+    const result = parseHardString(document.getText(selection), document.languageId, false, preSufArgString)
     if (!result)
       return []
 

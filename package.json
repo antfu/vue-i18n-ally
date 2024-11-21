@@ -1273,6 +1273,16 @@
           "type": "string",
           "description": "%config.default_namespace%"
         },
+        "i18n-ally.argsPrefix": {
+          "type": "string",
+          "default": "{",
+          "description": "%config.args_prefix%"
+        },
+        "i18n-ally.argsSuffix": {
+          "type": "string",
+          "default": "}",
+          "description": "%config.args_suffix%"
+        },
         "i18n-ally.derivedKeyRules": {
           "deprecationMessage": "Deprecated. Use \"i18n-ally.usage.derivedKeyRules\" instead."
         },

@@ -3,7 +3,7 @@ import { commands, window, QuickPickItem, Range, TextDocument } from 'vscode'
 import { trim } from 'lodash'
 import { overrideConfirm } from './overrideConfirm'
 import { Commands } from './commands'
-import { keypathValidate, Log, promptTemplates } from '~/utils'
+import { keypathValidate, Log, preSufArgString, promptTemplates } from '~/utils'
 import { ExtensionModule } from '~/modules'
 import { extractHardStrings, generateKeyFromText, Config, CurrentFile, DetectionResult, Telemetry, TelemetryKey } from '~/core'
 import i18n from '~/i18n'
@@ -53,7 +53,7 @@ async function ExtractOrInsertCommnad(options?: ExtractTextOptions, detection?: 
   const loader = CurrentFile.loader
 
   if (options.rawText && !options.text) {
-    const result = parseHardString(options.rawText, options.document?.languageId, options.isDynamic)
+    const result = parseHardString(options.rawText, options.document?.languageId, options.isDynamic, preSufArgString)
     options.text = result?.text || ''
     options.args = result?.args
   }

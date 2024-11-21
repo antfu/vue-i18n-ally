@@ -105,6 +105,8 @@
   "config.translate_override_existing": "Override existing messages on translating",
   "config.translate_save_as_candidates": "Save translations result to \"Translation Candidates\" instead of writting to the locale files.",
   "config.usage.scanning_ignore": "Ignore glob patterns for scanning key usage",
+  "config.args_prefix": "Set prefix of args in hard code",
+  "config.args_suffix": "Set suffix of args in hard code",
   "editor.add_description": "Add description...",
   "editor.empty": "(empty)",
   "editor.title": "i18n Ally Editor",

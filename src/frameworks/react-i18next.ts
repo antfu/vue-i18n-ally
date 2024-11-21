@@ -91,11 +91,11 @@ class ReactI18nextFramework extends Framework {
     }
   }
 
-  refactorTemplates(keypath: string) {
+  refactorTemplates(keypath: string, args: string[]) {
     return [
-      `{t('${keypath}')}`,
-      `t('${keypath}')`,
-      `<Trans i18nKey="${keypath}"></Trans>`,
+      `t('${keypath}'${args.length ? `, [${args.join(', ')}]` : ''})`,
+      `{t('${keypath}'${args.length ? `, [${args.join(', ')}]` : ''})}`,
+      `<Trans i18nKey="${keypath}"${args.length ? ` values={[${args.join(', ')}]}` : ''}></Trans>`,
       keypath,
     ]
   }

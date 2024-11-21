@@ -129,7 +129,7 @@ export class Global {
         }
         return true
       })
-    const argsString = args?.length ? `,${args?.join(',')}` : ''
+    const argsString = args?.length ? `${args?.join(',')}` : ''
 
     const customReplacers = customTemplates
       .flatMap(i => i.templates)
