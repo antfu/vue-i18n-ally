@@ -1,0 +1,8 @@
+{
+  "title": "Flutter l10n Demo",
+  "@title": {
+    "description": "the name of app"
+  },
+  "btn_text": "You have pushed the button this many times:",
+  "home_page_title": "Flutter Demo Home Page"
+}

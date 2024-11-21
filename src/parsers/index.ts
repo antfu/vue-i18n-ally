@@ -8,6 +8,7 @@ import { PhpParser } from './php'
 import { Properties } from './properties'
 import { FluentParser } from './ftl'
 import { Parser } from './base'
+import { ArbParser } from './arb'
 
 export const DefaultEnabledParsers = ['json', 'yaml', 'json5']
 
@@ -16,6 +17,7 @@ export const AvailableParsers: Parser[] = [
   new JsonParser(),
   new YamlParser(),
   new Json5Parser(),
+  new ArbParser(),
 
   // available parsers
   new EcmascriptParser('js'),

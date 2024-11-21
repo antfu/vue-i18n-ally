@@ -1,0 +1,17 @@
+{
+  "i18n-ally.disabled": false,
+  "i18n-ally.enabledParsers": [
+    "arb"
+  ],
+  "i18n-ally.pathMatcher": "app_{locale}.{ext}",
+  "i18n-ally.extract.keygenStyle": "snake_case",
+  "i18n-ally.annotationInPlace": false,
+  "i18n-ally.annotationDelimiter": "//",
+  // "i18n-ally.sortKeys": true,
+  "editor.formatOnSave": true,
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+    }
+  },
+}

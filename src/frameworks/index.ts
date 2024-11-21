@@ -31,6 +31,7 @@ import GeneralFramework from './general'
 import LinguiFramework from './lingui'
 import JekyllFramework from './jekyll'
 import FluentVueSFCFramework from './fluent-vue-sfc'
+import FlutterL10nFramework from './flutter-l10n'
 import i18n from '~/i18n'
 import { Log } from '~/utils'
 
@@ -47,6 +48,7 @@ export const frameworks: Framework[] = [
   new NgxTranslateFramework(),
   new VSCodeFramework(),
   new FlutterFramework(),
+  new FlutterL10nFramework(),
   new EmberFramework(),
   new I18nextFramework(),
   new ShopifyI18nextFramework(),
