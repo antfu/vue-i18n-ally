@@ -85,7 +85,7 @@ export class KeyDetector {
   static init(ctx: ExtensionContext) {
     workspace.onDidChangeTextDocument(
       (e) => {
-        delete this._get_keys_cache[e.document.uri.fsPath]
+        delete this._get_keys_cache[e.document.uri.toString(true)]
       },
       null,
       ctx.subscriptions,
@@ -98,10 +98,12 @@ export class KeyDetector {
     let text = ''
     let rewriteContext: RewriteKeyContext| undefined
     let filepath = ''
+    let cacheKey = ''
     if (typeof document !== 'string') {
       filepath = document.uri.fsPath
-      if (this._get_keys_cache[filepath])
-        return this._get_keys_cache[filepath]
+      cacheKey = document.uri.toString(true)
+      if (this._get_keys_cache[cacheKey])
+        return this._get_keys_cache[cacheKey]
 
       regs = regs ?? Global.getUsageMatchRegex(document.languageId, filepath)
       text = document.getText()
@@ -116,8 +118,8 @@ export class KeyDetector {
     }
 
     const keys = regexFindKeys(text, regs, dotEnding, rewriteContext, scopes)
-    if (filepath)
-      this._get_keys_cache[filepath] = keys
+    if (cacheKey)
+      this._get_keys_cache[cacheKey] = keys
     return keys
   }
 
