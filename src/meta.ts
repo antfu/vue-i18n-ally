@@ -30,5 +30,6 @@ export const DEFAULT_LOCALE_COUNTRY_MAP = {
   ja: 'ja',
   es: 'es',
   vi: 'vn',
-  lb: 'lu'
+  lb: 'lu',
+  be: 'by'
 }
