@@ -51,10 +51,10 @@ const excludes = {
 
 describe('extraction-non-ascii-characters', () => {
   it('should includes', () => {
-    const excluded = [];
+    const excluded = []
 
-    for (let [script, chars] of Object.entries(includes)) {
-      let nonMatchingCharacters = '';
+    for (const [script, chars] of Object.entries(includes)) {
+      let nonMatchingCharacters = ''
 
       for (let i = 0; i < chars.length; i++) {
         if (!shouldExtract(chars[i] + chars[i], rules))
@@ -69,10 +69,10 @@ describe('extraction-non-ascii-characters', () => {
   })
 
   it('should exclude', () => {
-    const included = [];
+    const included = []
 
-    for (let [script, chars] of Object.entries(excludes)) {
-      let nonMatchingCharacters = '';
+    for (const [script, chars] of Object.entries(excludes)) {
+      let nonMatchingCharacters = ''
       for (let i = 0; i < chars.length; i++) {
         if (shouldExtract(chars[i] + chars[i], rules))
           nonMatchingCharacters += chars[i]

@@ -26,6 +26,9 @@
   ],
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+  },
   "i18n-ally.localesPaths": "./locales",
   "i18n-ally.sourceLanguage": "en",
   "i18n-ally.keystyle": "flat",

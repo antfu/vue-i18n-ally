@@ -4,6 +4,7 @@ import { runTests } from '@vscode/test-electron'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import { red, green, yellow, gray, cyan } from 'chalk'
+// eslint-disable-next-line import/named
 import { ArrayChange, diffArrays } from 'diff'
 
 const args = process.argv.slice(2)

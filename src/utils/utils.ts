@@ -102,8 +102,8 @@ export function abbreviateNumber(value: number): string {
  */
 export function getLocaleCompare(
   sortLocaleSetting: string | undefined,
-  fileLocale: string
+  fileLocale: string,
 ): (x: string, y: string) => number {
-  const sortLocale = sortLocaleSetting ? sortLocaleSetting : fileLocale;
-  return new Intl.Collator(sortLocale).compare;
+  const sortLocale = sortLocaleSetting || fileLocale
+  return new Intl.Collator(sortLocale).compare
 }

@@ -13,7 +13,6 @@ export abstract class BaseTagSystem {
     return bcp47
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   toFlagname(locale: string): string | undefined {
     return undefined
   }

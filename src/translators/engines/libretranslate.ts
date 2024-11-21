@@ -19,7 +19,7 @@ export default class LibreTranslate extends TranslateEngine {
       q: options.text,
       source: from,
       target: to,
-      format: "html",
+      format: 'html',
     }, {
       headers: {
         'Content-Type': 'application/json',

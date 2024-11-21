@@ -9,7 +9,6 @@ export enum ExtractionScore {
 export abstract class ExtractionRule {
   abstract name: string
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   shouldExtract(str: string): ExtractionScore | void {
     return ExtractionScore.None
   }

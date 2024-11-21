@@ -80,6 +80,8 @@ export default Vue.extend({
     record: { type: Object, default: () => ({ keypath: '', locale: '' }) },
   },
 
+  emits: ['done'],
+
   data() {
     return {
       form: {

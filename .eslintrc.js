@@ -6,4 +6,10 @@ module.exports = {
     mocha: true,
   },
   extends: '@antfu',
+  rules: {
+    '@typescript-eslint/no-unused-vars': ['warn', {
+      args: 'none',
+      varsIgnorePattern: '^_',
+    }],
+  },
 }

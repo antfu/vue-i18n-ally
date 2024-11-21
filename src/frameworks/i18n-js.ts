@@ -32,7 +32,6 @@ class I18js extends Framework {
       keypath,
     ]
   }
-
 }
 
 export default I18js

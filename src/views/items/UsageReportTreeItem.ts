@@ -1,6 +1,6 @@
 import { ExtensionContext, TreeItemCollapsibleState } from 'vscode'
-import { NodeHelper } from '~/utils'
 import { LocaleTreeItem } from '.'
+import { NodeHelper } from '~/utils'
 import { KeyUsage, LocaleNode, CurrentFile } from '~/core'
 
 export class UsageReportTreeItem extends LocaleTreeItem {

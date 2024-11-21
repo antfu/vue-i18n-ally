@@ -1,16 +1,16 @@
-import axios from "axios";
-import TranslateEngine, { TranslateOptions, TranslateResult } from "./base";
-import { Config } from "~/core";
+import axios from 'axios'
+import TranslateEngine, { TranslateOptions, TranslateResult } from './base'
+import { Config } from '~/core'
 
 export default class OpenAITranslate extends TranslateEngine {
-  apiRoot = "https://api.openai.com";
-  systemPrompt = "You are a professional translation engine. Please translate text without explanation.";
+  apiRoot = 'https://api.openai.com'
+  systemPrompt = 'You are a professional translation engine. Please translate text without explanation.'
 
   async translate(options: TranslateOptions) {
-    let apiKey = Config.openaiApiKey;
-    let apiRoot = this.apiRoot;
-    if (Config.openaiApiRoot) apiRoot = Config.openaiApiRoot.replace(/\/$/, "");
-    let model = Config.openaiApiModel;
+    const apiKey = Config.openaiApiKey
+    let apiRoot = this.apiRoot
+    if (Config.openaiApiRoot) apiRoot = Config.openaiApiRoot.replace(/\/$/, '')
+    const model = Config.openaiApiModel
 
     const response = await axios.post(
       `${apiRoot}/v1/chat/completions`,
@@ -23,30 +23,30 @@ export default class OpenAITranslate extends TranslateEngine {
         presence_penalty: 1,
         messages: [
           {
-            role: "system",
+            role: 'system',
             content: this.systemPrompt,
           },
           {
-            role: "user",
+            role: 'user',
             content: this.generateUserPrompts(options),
           },
         ],
       },
       {
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
         },
-      }
-    );
+      },
+    )
 
-    return this.transform(response, options);
+    return this.transform(response, options)
   }
 
   transform(response: any, options: TranslateOptions): TranslateResult {
-    const { text, from = "auto", to = "auto" } = options;
+    const { text, from = 'auto', to = 'auto' } = options
 
-    const translatedText = response.data.choices[0].message.content?.trim();
+    const translatedText = response.data.choices[0].message.content?.trim()
 
     const r: TranslateResult = {
       text,
@@ -54,19 +54,18 @@ export default class OpenAITranslate extends TranslateEngine {
       from,
       response,
       result: translatedText ? [translatedText] : undefined,
-      linkToResult: "",
-    };
+      linkToResult: '',
+    }
 
-
-    return r;
+    return r
   }
 
   generateUserPrompts(options: TranslateOptions): string {
-    const sourceLang = options.from;
-    const targetLang = options.to;
+    const sourceLang = options.from
+    const targetLang = options.to
 
-    let generatedUserPrompt = `translate from ${sourceLang} to ${targetLang}:\n\n${options.text}`;
+    const generatedUserPrompt = `translate from ${sourceLang} to ${targetLang}:\n\n${options.text}`
 
-    return generatedUserPrompt;
+    return generatedUserPrompt
   }
 }

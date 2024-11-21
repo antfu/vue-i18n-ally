@@ -74,6 +74,8 @@ export default Vue.extend({
     active: { type: Boolean, default: false },
   },
 
+  emits: ['update:active'],
+
   data() {
     return {
       focused: false,

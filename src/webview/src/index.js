@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex, { Store } from 'vuex'
 import 'vue-material-design-icons/styles.css'
 import VueI18n from 'vue-i18n'
 import VCheck from 'vue-material-design-icons/Check.vue'
@@ -46,7 +45,7 @@ const i18n = new VueI18n({
   messages: {},
 })
 
-const store = new Vuex.Store({
+const store = new Store({
   state: () => {
     return Object.assign({
       ready: false,

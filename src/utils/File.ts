@@ -16,7 +16,7 @@ interface DecodeData {
 
 const defaultEncoding = 'utf-8'
 const encodingMapping: Record<string, string> = {
-  ascii: defaultEncoding,
+  'ascii': defaultEncoding,
   'windows-1252': defaultEncoding,
 }
 
