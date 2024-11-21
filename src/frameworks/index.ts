@@ -31,6 +31,7 @@ import GeneralFramework from './general'
 import LinguiFramework from './lingui'
 import JekyllFramework from './jekyll'
 import FluentVueSFCFramework from './fluent-vue-sfc'
+import GravityI18nFramework from './gravity-i18n';
 import i18n from '~/i18n'
 import { Log } from '~/utils'
 
@@ -69,6 +70,7 @@ export const frameworks: Framework[] = [
   new LinguiFramework(),
   new JekyllFramework(),
   new GeneralFramework(),
+  new GravityI18nFramework(),
 
   // Vue SFC and FluentVue SFC should be the last ones
   new VueSFCFramework(),

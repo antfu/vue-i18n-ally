@@ -1,0 +1,10 @@
+{
+  "i18n-ally.localesPaths": [
+    "src/i18n-keysets"
+  ],
+  "i18n-ally.pathMatcher": "{namespaces}/{locale}.json",
+  "i18n-ally.enabledFrameworks": ["gravity-i18n"],
+  "i18n-ally.namespace": true,
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.dirStructure": "file"
+}

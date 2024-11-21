@@ -6,7 +6,7 @@ import { Coverage, FileInfo, PendingWrite, NodeOptions, RewriteKeySource, Rewrit
 import { Config, Global } from '..'
 import { resolveFlattenRootKeypath, resolveFlattenRoot, NodeHelper } from '~/utils'
 
-const NESTED_PLURALIZATION_KEYS = ['one', 'other', 'zero', 'two', 'few', 'many']
+const NESTED_PLURALIZATION_KEYS = ['one', 'other', 'zero', 'two', 'few', 'many', '0', '1', '2', '3', '4', '5']
 export abstract class Loader extends Disposable {
   protected _disposables: Disposable[] = []
   protected _onDidChange = new EventEmitter<string>()
