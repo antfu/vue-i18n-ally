@@ -7,7 +7,7 @@ class NextIntlFramework extends Framework {
   id = 'next-intl'
   display = 'next-intl'
   namespaceDelimiter = '.'
-  perferredKeystyle?: KeyStyle = 'nested'
+  preferredKeystyle?: KeyStyle = 'nested'
 
   namespaceDelimiters = ['.']
   namespaceDelimitersRegex = /[\.]/g

@@ -8,7 +8,7 @@ class NextInternationalFramework extends Framework {
   id = 'next-international'
   display = 'next-international'
   namespaceDelimiter = '.'
-  perferredKeystyle?: KeyStyle = 'flat'
+  preferredKeystyle?: KeyStyle = 'flat'
 
   namespaceDelimiters = ['.']
   namespaceDelimitersRegex = /[\.]/g
