@@ -1042,7 +1042,8 @@
               "deepl",
               "libretranslate",
               "baidu",
-              "openai"
+              "openai",
+              "cohere"
             ]
           },
           "default": [
@@ -1126,6 +1127,32 @@
             "gpt-4-32k-0613"
           ],
           "description": "%config.openai_api_model%"
+        },
+        "i18n-ally.translate.cohere.apiKey": {
+          "type": "string",
+          "default": null,
+          "description": "%config.cohere_api_key%"
+        },
+        "i18n-ally.translate.cohere.apiRoot": {
+          "type": "string",
+          "default": "https://api.cohere.com",
+          "description": "%config.cohere_api_root%"
+        },
+        "i18n-ally.translate.cohere.apiModel": {
+          "type": "string",
+          "default": "command-r7b-12-2024",
+          "enum": [
+            "command-r7b-12-2024",
+            "command-r-plus-08-2024",
+            "command-r-08-2024"
+          ],
+          "description": "%config.cohere_api_model%"
+        },
+        "i18n-ally.translate.cohere.translateInstructions": {
+          "type": "string",
+          "default": "You are a professional translation engine. Please translate text without explanation.",
+          "description": "%config.cohere_translate_instructions%",
+          "editPresentation": "multilineText"
         },
         "i18n-ally.usage.scanningIgnore": {
           "type": "array",

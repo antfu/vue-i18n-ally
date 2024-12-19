@@ -180,7 +180,7 @@ export class Config {
     return this.getConfig<SortCompare>('sortCompare') || 'binary'
   }
 
-  static get sortLocale(): string | undefined{
+  static get sortLocale(): string | undefined {
     return this.getConfig<string>('sortLocale')
   }
 
@@ -582,6 +582,22 @@ export class Config {
 
   static get openaiApiModel() {
     return this.getConfig<string>('translate.openai.apiModel') ?? 'gpt-3.5-turbo'
+  }
+
+  static get cohereApiKey() {
+    return this.getConfig<string | null | undefined>('translate.cohere.apiKey')
+  }
+
+  static get cohereApiRoot() {
+    return this.getConfig<string | null | undefined>('translate.cohere.apiRoot')
+  }
+
+  static get cohereApiModel() {
+    return this.getConfig<string>('translate.cohere.apiModel') ?? 'command-r7b-12-2024'
+  }
+
+  static get cohereTranslateInstructions() {
+    return this.getConfig<string>('translate.cohere.translateInstructions') ?? 'You are a professional translation engine. Please translate text without explanation.'
   }
 
   static get telemetry(): boolean {
