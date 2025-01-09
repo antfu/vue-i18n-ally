@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "",
   "command.go_to_prev_usage": "",
   "command.go_to_range": "",
+  "command.i18n-ally.deeply-list-glossaries": "",
+  "command.i18n-ally.deeply-update-glossaries": "",
+  "command.i18n-ally.deeply-update-glossary": "",
   "command.insert_key": "Вставити ключ",
   "command.locale_visibility_hide": "Приховати мову",
   "command.locale_visibility_show": "Показати мову",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "",
   "config.baidu_appid": "",
   "config.deepl_api_key": "Ключ для використання API DeepL",
+  "config.deepl_glossary_dir": "",
   "config.deepl_log": "Відображати налагоджувальні журнали DeepL",
   "config.deepl_use_free_api_entry": "",
   "config.default_namespace": "Глобальні простори імен за замовчуванням",
@@ -88,7 +92,9 @@
   "config.review_remove_on_resolved": "Видаляти оброблені коментарі, а не позначати їх як оброблені",
   "config.review_username": "Ім'я користувача для аудиту",
   "config.show_flags": "Показувати прапори разом з кодами мов",
+  "config.sort_compare": "",
   "config.sort_keys": "Сортування ключів при збереженні в  JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "Мова оригіналу для машинного перекладу",
   "config.tab_style": "Стиль вкладки для файлів перекладів",
   "config.target_picking_strategy": "Стратегія вибору файлу перекладу при виявленні декількох файлів",
@@ -234,5 +240,6 @@
   "view.usage_keys_in_use": "{0} ключі використовуються",
   "view.usage_keys_missing": "{0} ключі відсутні",
   "view.usage_keys_not_in_use": "{0} ключі НЕ використовуються",
-  "view.usage_report_none": "Оновіть, щоб почати аналіз використання ключа"
+  "view.usage_report_none": "Оновіть, щоб почати аналіз використання ключа",
+  "นามสกุล": ""
 }

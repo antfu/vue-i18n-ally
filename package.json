@@ -368,6 +368,21 @@
         "title": "%command.deepl_usage%"
       },
       {
+        "command": "i18n-ally.deepl-update-glossaries",
+        "category": "%extname%",
+        "title": "%command.i18n-ally.deeply-update-glossaries%"
+      },
+      {
+        "command": "i18n-ally.deepl-update-glossary",
+        "category": "%extname%",
+        "title": "%command.i18n-ally.deeply-update-glossary%"
+      },
+      {
+        "command": "i18n-ally.deepl-list-glossaries",
+        "category": "%extname%",
+        "title": "%command.i18n-ally.deeply-list-glossaries%"
+      },
+      {
         "command": "i18n-ally.go-to-range",
         "category": "%extname%",
         "title": "%command.go_to_range%"
@@ -1094,6 +1109,11 @@
           "type": "boolean",
           "default": false,
           "description": "%config.deepl_use_free_api_entry%"
+        },
+        "i18n-ally.translate.deepl.glossariesDir": {
+          "type": "string",
+          "default": null,
+          "description": "%config.deepl_glossary_dir%"
         },
         "i18n-ally.translate.libre.apiRoot": {
           "type": "string",

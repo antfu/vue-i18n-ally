@@ -46,4 +46,7 @@ export const enum Commands {
   review_apply_translation = 'i18n-ally.review.apply-translation',
   review_apply_suggestion = 'i18n-ally.review.apply-suggestion',
   deepl_usage = 'i18n-ally.deepl-usage',
+  deepl_update_glossaries = 'i18n-ally.deepl-update-glossaries',
+  deepl_update_glossary = 'i18n-ally.deepl-update-glossary',
+  deepl_list_glossaries = 'i18n-ally.deepl-list-glossaries',
 }

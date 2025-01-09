@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "Go to next usage",
   "command.go_to_prev_usage": "Go to previous usage",
   "command.go_to_range": "Go to range",
+  "command.i18n-ally.deeply-list-glossaries": "List available glossaries",
+  "command.i18n-ally.deeply-update-glossaries": "Update DeepL Glossaries",
+  "command.i18n-ally.deeply-update-glossary": "Update DeepL Glossary",
   "command.insert_key": "Insert key",
   "command.locale_visibility_hide": "Hide locale",
   "command.locale_visibility_show": "Show locale",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "APP Secret to use Baidu translate engine",
   "config.baidu_appid": "APP ID to use Baidu translate engine",
   "config.deepl_api_key": "API key to use DeepL translate engine",
+  "config.deepl_glossary_dir": "Relative path to the directory that keeps deepl-glossary sources",
   "config.deepl_log": "Show DeepL engine debug logs",
   "config.deepl_use_free_api_entry": "Use DeepL Free API entry point",
   "config.default_namespace": "Global default namespace",
@@ -88,8 +92,8 @@
   "config.review_remove_on_resolved": "Remove the comment instead of marking it as resolved.",
   "config.review_username": "Username for reviewing",
   "config.show_flags": "Show flags along with locale codes",
-  "config.sort_keys": "Sort keys when saving to JSON/YAML",
   "config.sort_compare": "Strategy for sorting keys.",
+  "config.sort_keys": "Sort keys when saving to JSON/YAML",
   "config.sort_locale": "Locale to with if locale sort is used (will use the file's own locale if not specified)",
   "config.source_language": "Source language for machine translation",
   "config.tab_style": "Tab style for locale files",
@@ -236,5 +240,6 @@
   "view.usage_keys_in_use": "{0} keys are in use",
   "view.usage_keys_missing": "{0} keys are missing",
   "view.usage_keys_not_in_use": "{0} keys are NOT in use",
-  "view.usage_report_none": "Press refresh to start analysing key usage"
+  "view.usage_report_none": "Press refresh to start analysing key usage",
+  "นามสกุล": ""
 }

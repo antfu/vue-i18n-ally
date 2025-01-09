@@ -568,6 +568,10 @@ export class Config {
     return !!this.getConfig('translate.deepl.enableLog')
   }
 
+  static get deeplGlossariesDir() {
+    return this.getConfig<string|null|undefined>('translate.deepl.glossariesDir');
+  }
+
   static get libreTranslateApiRoot() {
     return this.getConfig<string | null | undefined>('translate.libre.apiRoot')
   }

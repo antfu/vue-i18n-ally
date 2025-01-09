@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "",
   "command.go_to_prev_usage": "",
   "command.go_to_range": "",
+  "command.i18n-ally.deeply-list-glossaries": "",
+  "command.i18n-ally.deeply-update-glossaries": "",
+  "command.i18n-ally.deeply-update-glossary": "",
   "command.insert_key": "Insertar clave",
   "command.locale_visibility_hide": "Ocultar configuración regional",
   "command.locale_visibility_show": "Mostrar configuración regional",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "",
   "config.baidu_appid": "",
   "config.deepl_api_key": "API key para el traductor DeepL",
+  "config.deepl_glossary_dir": "",
   "config.deepl_log": "Mostrar mensajes de depuración del motor DeepL",
   "config.deepl_use_free_api_entry": "",
   "config.default_namespace": "",
@@ -88,7 +92,9 @@
   "config.review_remove_on_resolved": "Elimina el comentario en lugar de marcarlo como resuelto.",
   "config.review_username": "Nombre de usuario para la revisión",
   "config.show_flags": "Mostrar banderas junto a códigos regionales",
+  "config.sort_compare": "",
   "config.sort_keys": "Guardar con json/yaml ordenado",
+  "config.sort_locale": "",
   "config.source_language": "Código fuente para la traducción automática",
   "config.tab_style": "Estilo de pestañas para los archivos de localización",
   "config.target_picking_strategy": "Estrategias que tratan con más de un archivo de localización.",
@@ -234,5 +240,6 @@
   "view.usage_keys_in_use": "{0} claves en uso",
   "view.usage_keys_missing": "Faltan las claves {0}",
   "view.usage_keys_not_in_use": "Las claves {0} NO están en uso",
-  "view.usage_report_none": "Presione actualizar para comenzar a analizar el uso de las teclas"
+  "view.usage_report_none": "Presione actualizar para comenzar a analizar el uso de las teclas",
+  "นามสกุล": ""
 }

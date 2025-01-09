@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "Weiter zur nächsten Verwendung",
   "command.go_to_prev_usage": "Zur vorherigen Verwendung gehen",
   "command.go_to_range": "Springe zum Bereich",
+  "command.i18n-ally.deeply-list-glossaries": "Verfügbare Glossare auflisten",
+  "command.i18n-ally.deeply-update-glossaries": "DeepL-Glossare aktialisieren",
+  "command.i18n-ally.deeply-update-glossary": "DeepL-Glossar aktualisieren",
   "command.insert_key": "Schlüssel einfügen",
   "command.locale_visibility_hide": "Lokalisierung verbergen",
   "command.locale_visibility_show": "Lokalisierung anzeigen",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "",
   "config.baidu_appid": "",
   "config.deepl_api_key": "API key für die DeepL translate engine",
+  "config.deepl_glossary_dir": "Relativer Pfad zum Ordner der die Glossar-CSV-Dateien enthält",
   "config.deepl_log": "DeepL debug logs anzeigen",
   "config.deepl_use_free_api_entry": "Kostenlose DeepL Version benutzen",
   "config.default_namespace": "Globaler Namespace",
@@ -88,7 +92,9 @@
   "config.review_remove_on_resolved": "Kommentar löschen, anstatt ihn als behoben zu markieren. ",
   "config.review_username": "Nutzername zum Überprüfen",
   "config.show_flags": "Flaggen zusammen mit Lokalisierungscodes anzeigen",
+  "config.sort_compare": "",
   "config.sort_keys": "Schlüssel beim speichern von JSON/YAML sortierne",
+  "config.sort_locale": "",
   "config.source_language": "Quellsprache für machinelle Übersetzung",
   "config.tab_style": "Tabulatorstil",
   "config.target_picking_strategy": "Es wurde eine Strategie gefunden, die mit mehr als einer Lokalisierungsdatei arbeitet.",
@@ -234,5 +240,6 @@
   "view.usage_keys_in_use": "{0} Schlüssel sind in Verwendung",
   "view.usage_keys_missing": "{0} Schlüssel fehlen",
   "view.usage_keys_not_in_use": "{0} Schlüssel nicht in Verwendung",
-  "view.usage_report_none": "Neulanden um Schlüssel Benutzng zu analysieren"
+  "view.usage_report_none": "Neulanden um Schlüssel Benutzng zu analysieren",
+  "นามสกุล": ""
 }

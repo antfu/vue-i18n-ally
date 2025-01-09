@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "Перейти к следующему использованию",
   "command.go_to_prev_usage": "",
   "command.go_to_range": "Перейти к диапазону",
+  "command.i18n-ally.deeply-list-glossaries": "",
+  "command.i18n-ally.deeply-update-glossaries": "",
+  "command.i18n-ally.deeply-update-glossary": "",
   "command.insert_key": "Вставить ключ",
   "command.locale_visibility_hide": "Скрыть перевод",
   "command.locale_visibility_show": "Показать перевод",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "",
   "config.baidu_appid": "",
   "config.deepl_api_key": "API ключ для использования DeepL",
+  "config.deepl_glossary_dir": "",
   "config.deepl_log": "Отображать отладочные журналы DeepL",
   "config.deepl_use_free_api_entry": "Использовать бесплатную версию DeepL API",
   "config.default_namespace": "Глобальное пространство имен по умолчанию",
@@ -88,7 +92,9 @@
   "config.review_remove_on_resolved": "Удалять обработанные комментарии, а не помечать их как обработанные.",
   "config.review_username": "Имя пользователя для рецензирования",
   "config.show_flags": "Показывать флаги вместе с кодами переводов",
+  "config.sort_compare": "",
   "config.sort_keys": "Сортировка ключей при сохранении в JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "Исходный язык для машинного перевода",
   "config.tab_style": "Стиль вкладки для файлов переводов",
   "config.target_picking_strategy": "Стратегия выбора файла перевода при обнаружении нескольких файлов перевода",
@@ -234,5 +240,6 @@
   "view.usage_keys_in_use": "{0} ключей используется",
   "view.usage_keys_missing": "{0} ключей отсутствует",
   "view.usage_keys_not_in_use": "{0} ключей НЕ используется",
-  "view.usage_report_none": "Обновите, чтобы начать анализ использования ключа"
+  "view.usage_report_none": "Обновите, чтобы начать анализ использования ключа",
+  "นามสกุล": ""
 }

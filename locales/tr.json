@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "Bir sonraki kullanıma git",
   "command.go_to_prev_usage": "Bir önceki kullanıma dön",
   "command.go_to_range": "Aralığa git",
+  "command.i18n-ally.deeply-list-glossaries": "",
+  "command.i18n-ally.deeply-update-glossaries": "",
+  "command.i18n-ally.deeply-update-glossary": "",
   "command.insert_key": "Çeviri ekle",
   "command.locale_visibility_hide": "Dili gizle",
   "command.locale_visibility_show": "Dili göster",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "",
   "config.baidu_appid": "",
   "config.deepl_api_key": "DeepL çeviri sistemini kullanmak için API anahtarı",
+  "config.deepl_glossary_dir": "",
   "config.deepl_log": "DeepL sisteminin hata ayıklama kayıtlarını göster",
   "config.deepl_use_free_api_entry": "DeepL'in Bedava API giriş noktasını kullanın",
   "config.default_namespace": "Global varsayılan namespace",
@@ -88,7 +92,9 @@
   "config.review_remove_on_resolved": "İncelendi olarak işaretlemek yerine yorumu sil.",
   "config.review_username": "İncelemeler için kullanıcı adınız",
   "config.show_flags": "Çeviri kodlarıyla beraber eşleşen bayrağı göster",
+  "config.sort_compare": "",
   "config.sort_keys": "JSON/YAML dosyasına kaydederken çeviri anahtarlarını diz",
+  "config.sort_locale": "",
   "config.source_language": "Makine çevirisi için kaynak dil",
   "config.tab_style": "Dil dosyaları için Tab stili",
   "config.target_picking_strategy": "Birden fazla dil dosyası bulunduğunda uygulanacak strateji",
@@ -234,5 +240,6 @@
   "view.usage_keys_in_use": "{0} çeviri kullanımda",
   "view.usage_keys_missing": "{0} çeviri eksik",
   "view.usage_keys_not_in_use": "{0} çeviri kullanımda DEĞİL",
-  "view.usage_report_none": "Çeviri kullanımını incelemek için yenileye basın"
+  "view.usage_report_none": "Çeviri kullanımını incelemek için yenileye basın",
+  "นามสกุล": ""
 }

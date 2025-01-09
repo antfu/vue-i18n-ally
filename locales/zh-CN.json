@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "",
   "command.go_to_prev_usage": "",
   "command.go_to_range": "",
+  "command.i18n-ally.deeply-list-glossaries": "",
+  "command.i18n-ally.deeply-update-glossaries": "",
+  "command.i18n-ally.deeply-update-glossary": "",
   "command.insert_key": "插入i18n文案",
   "command.locale_visibility_hide": "隐藏此语言",
   "command.locale_visibility_show": "显示此语言",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "百度平台分配的密钥",
   "config.baidu_appid": "百度平台APPID",
   "config.deepl_api_key": "",
+  "config.deepl_glossary_dir": "",
   "config.deepl_log": "",
   "config.deepl_use_free_api_entry": "",
   "config.default_namespace": "",
@@ -88,7 +92,9 @@
   "config.review_remove_on_resolved": "删除已处理的审批留言，而不是只将其标记为已处理。",
   "config.review_username": "使用者名称",
   "config.show_flags": "显示国旗图标",
+  "config.sort_compare": "",
   "config.sort_keys": "保存排序后的JSON/YAML",
+  "config.sort_locale": "",
   "config.source_language": "翻译源语言",
   "config.tab_style": "文案文件的缩进样式",
   "config.target_picking_strategy": "如果找到多个语言文件时的语言文件选择策略",
@@ -234,5 +240,6 @@
   "view.usage_keys_in_use": "{0} 条文案使用中",
   "view.usage_keys_missing": "{0} 条文案缺失",
   "view.usage_keys_not_in_use": "{0} 条文案未被使用",
-  "view.usage_report_none": "点击刷新开始使用分析"
+  "view.usage_report_none": "点击刷新开始使用分析",
+  "นามสกุล": ""
 }

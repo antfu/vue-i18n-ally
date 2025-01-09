@@ -14,6 +14,9 @@
   "command.go_to_next_usage": "Ir para o próximo uso",
   "command.go_to_prev_usage": "Ir para o uso anterior",
   "command.go_to_range": "Ir para o intervalo",
+  "command.i18n-ally.deeply-list-glossaries": "",
+  "command.i18n-ally.deeply-update-glossaries": "",
+  "command.i18n-ally.deeply-update-glossary": "",
   "command.insert_key": "Inserir chave",
   "command.locale_visibility_hide": "Esconder locale",
   "command.locale_visibility_show": "Exibir locale",
@@ -40,6 +43,7 @@
   "config.baidu_app_secret": "",
   "config.baidu_appid": "",
   "config.deepl_api_key": "",
+  "config.deepl_glossary_dir": "",
   "config.deepl_log": "",
   "config.deepl_use_free_api_entry": "",
   "config.default_namespace": "",
@@ -88,7 +92,9 @@
   "config.review_remove_on_resolved": "",
   "config.review_username": "",
   "config.show_flags": "",
+  "config.sort_compare": "",
   "config.sort_keys": "Salvar com json/yaml seperados",
+  "config.sort_locale": "",
   "config.source_language": "Idioma de origem para tradução de máquina",
   "config.tab_style": "Estilo da aba para arquivos de lozalização (locales)",
   "config.target_picking_strategy": "",
@@ -234,5 +240,6 @@
   "view.usage_keys_in_use": "{0} chaves em uso",
   "view.usage_keys_missing": "{0} chaves faltantes",
   "view.usage_keys_not_in_use": "{0} chaves não estão em uso",
-  "view.usage_report_none": ""
+  "view.usage_report_none": "",
+  "นามสกุล": ""
 }
