@@ -26,9 +26,7 @@ deepl.interceptors.request.use((req) => {
     ? 'https://api-free.deepl.com/v2'
     : 'https://api.deepl.com/v2'
 
-  req.params = {
-    auth_key: Config.deeplApiKey,
-  }
+  req.headers['Authorization'] = `DeepL-Auth-Key ${Config.deeplApiKey}`
 
   if (req.method === 'POST' || req.method === 'post') {
     req.headers['Content-Type'] = 'application/x-www-form-urlencoded'
