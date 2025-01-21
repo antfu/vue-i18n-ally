@@ -4,7 +4,7 @@ import { Config } from "~/core";
 
 export default class OpenAITranslate extends TranslateEngine {
   apiRoot = "https://api.openai.com";
-  systemPrompt = "You are a professional translation engine. Please translate text without explanation.";
+  baseSystemPrompt = "You are a professional translation engine. Please translate text without explanation.";
 
   async translate(options: TranslateOptions) {
     let apiKey = Config.openaiApiKey;
@@ -12,6 +12,7 @@ export default class OpenAITranslate extends TranslateEngine {
     if (Config.openaiApiRoot) apiRoot = Config.openaiApiRoot.replace(/\/$/, "");
     let model = Config.openaiApiModel;
 
+    const systemPrompt = Config.openaiApiSystemPromptExtended ? this.baseSystemPrompt + Config.openaiApiSystemPromptExtended : this.baseSystemPrompt;
     const response = await axios.post(
       `${apiRoot}/v1/chat/completions`,
       {
@@ -24,7 +25,7 @@ export default class OpenAITranslate extends TranslateEngine {
         messages: [
           {
             role: "system",
-            content: this.systemPrompt,
+            content: systemPrompt,
           },
           {
             role: "user",
