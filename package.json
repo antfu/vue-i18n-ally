@@ -1127,6 +1127,11 @@
           ],
           "description": "%config.openai_api_model%"
         },
+        "i18n-ally.translate.openai.systemPromptExtended": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI system prompt. This can be used to customize the behavior of the translation engine through natural language."
+        },
         "i18n-ally.usage.scanningIgnore": {
           "type": "array",
           "items": {
